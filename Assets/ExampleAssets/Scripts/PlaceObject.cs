@@ -56,6 +56,29 @@ public class ARObjectPlacement : MonoBehaviour
                 GameManager.Instance.spawnMode = false;
                 GameManager.Instance.SelectedTree = null;
             }
+            else if (GameManager.Instance.DeleteTree)
+            {
+                Debug.Log("IN DELETE MODE");
+                Ray ray = Camera.main.ScreenPointToRay(Input.touches[0].position);
+                RaycastHit hit;
+
+                // find if there is a tree in the tapped location and delete it 
+                if (Physics.Raycast(ray, out hit))
+                {
+                    // shoot a raycast at what we’re touching. If it hit something, destroy it.
+                    GameObject hitObject = hit.transform.gameObject;
+                    Debug.Log("hit object is : " + hitObject.name);
+
+                    if (hitObject.CompareTag("tree"))
+                    {
+                        // Destroy the object.
+                        Debug.Log("Destroy the object.");
+                        Destroy(hitObject);
+                        GameManager.Instance.DeleteTree = false;
+                    }
+                }
+
+            }
 
         }
     }
