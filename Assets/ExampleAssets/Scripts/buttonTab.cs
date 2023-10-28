@@ -10,15 +10,32 @@ using UnityEngine.InputSystem;
 
 public class buttonTab : MonoBehaviour
 {
-    public Button round, square;
+    // private Button pine = GameObject.Find("pine").GetComponent<Button>();
+    // private Button palm = GameObject.Find("palm").GetComponent<Button>();
+    // private Button poplar = GameObject.Find("poplar").GetComponent<Button>();
+    // private Button willow = GameObject.Find("willow").GetComponent<Button>();
+    // private Button oak = GameObject.Find("oak").GetComponent<Button>();
+
+    // private Button maple = GameObject.Find("maple").GetComponent<Button>();
+    public Button pine, palm, poplar, willow, oak, maple;
     public Button delete, deleteAll;
 
     void Start()
     {
         delete.onClick.AddListener(() => DeleteClicked());
         deleteAll.onClick.AddListener(() => DeleteAllClicked());
-        round.onClick.AddListener(() => ButtonClicked("round"));
-        square.onClick.AddListener(() => ButtonClicked("square"));
+        // pine.onClick.AddListener(() => ButtonClicked("pine"));
+        // palm.onClick.AddListener(() => ButtonClicked("palm"));
+        // poplar.onClick.AddListener(() => ButtonClicked("poplar"));
+        // willow.onClick.AddListener(() => ButtonClicked("willow"));
+        // oak.onClick.AddListener(() => ButtonClicked("oak"));
+        // maple.onClick.AddListener(() => ButtonClicked("maple"));
+        pine.onClick.AddListener(() => ButtonClicked("round"));
+        palm.onClick.AddListener(() => ButtonClicked("square"));
+        poplar.onClick.AddListener(() => ButtonClicked("round"));
+        willow.onClick.AddListener(() => ButtonClicked("square"));
+        oak.onClick.AddListener(() => ButtonClicked("round"));
+        maple.onClick.AddListener(() => ButtonClicked("square"));
         // Text text = button.getComponentInChildren<Text>();
     }
     void ButtonClicked(string treeName)
