@@ -51,8 +51,9 @@ public class ARObjectPlacement : MonoBehaviour
                 {
                     Debug.Log("prefab is not null");
                     //todo: check if the touch input collides with an existing tree, if so, don't spawn a new one. otherwise, spawn a new one
-                    
-                    Instantiate(prefab, hitPose.position, hitPose.rotation);
+
+                    GameObject obj = Instantiate(prefab, hitPose.position, hitPose.rotation);
+                    obj.transform.localScale = Vector3.one * 0.1f;
                 }
 
                 GameManager.Instance.spawnMode = false;
@@ -93,4 +94,3 @@ public class ARObjectPlacement : MonoBehaviour
 
 
 }
-
