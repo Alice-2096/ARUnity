@@ -1,6 +1,8 @@
 # Intro 
 This project involved the development of an Augmented Reality (AR) application similar to the IKEA app. The main goal was to allow users to interact with their iOS device's camera and place virtual plants in their physical environment. The project utilized a variety of technologies including Unity, ARKit for iOS, AR Plane Manager, Lean Touch, Raycast, Box Collider, Rigid Bodies, and SwiftUI components like ScrollView. 
 
+Interested in knowing more? Check out my [post](https://medium.com/@xj2096/florascapes-an-ar-plant-decor-app-e92f3d1a42ae)) on Medium!)
+
 # Video Demo
 
 https://github.com/Alice-2096/ARUnity/assets/97613431/85ce5840-4d94-41e3-bd98-424c7df05406
